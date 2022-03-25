@@ -1,4 +1,6 @@
-# coin-gecko-api
+# CoinGecko API Python
+
+Code related to [CoinGeckoAPI](https://www.coingecko.com/pt/api/documentation)
 
 # Disclaimer  
 
