@@ -3,13 +3,13 @@ import ast
 
 def get_status_from_api(url):
     """
-    Get the current API status and the respective message
+    Get the current API status and the respective message.
 
-    INPUT
-    url -> str | the API url
+    Paramaters
+        url (str): The API url.
 
-    RETURN
-    status -> dict
+    Return
+        status (dict)
     """
 
     url += "ping"
