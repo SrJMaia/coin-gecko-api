@@ -1,5 +1,5 @@
 import requests
-import ast
+import json
 
 def get_status_from_api(url):
     """
@@ -9,16 +9,15 @@ def get_status_from_api(url):
         url (str): The API url.
 
     Return
-        status (dict)
+        status (dict): The API responde and status code
     """
 
     url += "ping"
 
     r = requests.get(url)
 
-    status_code = r.status_code
-    status = ast.literal_eval(r.content.decode("utf-8"))
+    status = json.loads(r.content)
 
-    status["status_code"] = status_code
+    status["status_code"] = r.status_code
 
     return status
