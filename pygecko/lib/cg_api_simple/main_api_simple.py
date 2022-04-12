@@ -12,7 +12,8 @@ def get_simple_price_from_api(url,
                             last_update_at=False,):
     """
     
-    Paramaters:
+    Paramaters
+    ----------
         url (str): The API url.
         cryptos (list): A list of strings with the crypto's name.
         second_currency (list): a list of strings with the second pair.
@@ -32,6 +33,8 @@ def get_simple_price_from_api(url,
     url = f"{url}&include_24hr_change={last_24_change}"
 
     url = f"{url}&include_last_updated_at={last_update_at}"
+
+    url = url.lower()
 
     r = requests.get(url)
 
