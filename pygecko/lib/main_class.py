@@ -6,9 +6,8 @@ class PyGecko():
     __API_URL = "https://api.coingecko.com/api/v3/"
     
     def __init__(self):
-        # Store the minute time rounded, every call check the times
-        # called the api already, if >= x block the call
         return
+
 
     def get_status(self, return_status_code = False):
         return get_status_from_api(self.__API_URL, 
