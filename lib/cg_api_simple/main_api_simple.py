@@ -1,6 +1,5 @@
 from lib.global_functions import bytes_to_dict
 import requests
-import json
 
 def get_simple_price_from_api(url,
                             cryptos_list,
