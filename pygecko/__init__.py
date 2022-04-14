@@ -1,1 +1,0 @@
-from pygecko.lib.main_class import PyGecko

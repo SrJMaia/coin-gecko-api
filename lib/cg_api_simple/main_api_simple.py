@@ -1,4 +1,4 @@
-from pygecko.lib.global_functions import bytes_to_dict
+from lib.global_functions import bytes_to_dict
 import requests
 import json
 

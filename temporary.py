@@ -1,4 +1,4 @@
-from pygecko import PyGecko
+from lib import PyGecko
 
 x = PyGecko()
 

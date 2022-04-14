@@ -1,5 +1,5 @@
-from pygecko.lib.cg_api_status.main_api_status import get_status_from_api
-from pygecko.lib.cg_api_simple.main_api_simple import get_simple_price_from_api
+from lib.cg_api_status.main_api_status import get_status_from_api
+from lib.cg_api_simple.main_api_simple import get_simple_price_from_api
 
 class PyGecko():
 
