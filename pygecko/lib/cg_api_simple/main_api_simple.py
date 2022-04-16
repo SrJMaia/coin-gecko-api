@@ -1,9 +1,8 @@
-from lib.global_functions import bytes_to_dict
 import requests
+import json
 
 def get_simple_price_from_api(url,
                             cryptos_list,
-                            return_status,
                             second_currency_list=["usd"],
                             market_cap=False,
                             last_24_vol=False,
@@ -15,8 +14,18 @@ def get_simple_price_from_api(url,
     ----------
         url (str): The API url.
         cryptos (list): A list of strings with the crypto's name.
-        second_currency (list): a list of strings with the second pair.
+        second_currency (list): A list of strings with the second pair.
             default ['usd'].
+        market_cap (bool): If True, it will return the market cap of each coin.
+                            default False.
+        last_24_vol (bool): If True, it will return the last 24h volume of each
+                            coin.
+                            default False.
+        last_24_change (bool): If True, it will return the 24h percent change.
+                            default False.
+        last_update_at (bool): If True, it will return the last update time in 
+                            unix time.
+                            default False.    
     """
 
     url += "simple/price?"
@@ -37,7 +46,7 @@ def get_simple_price_from_api(url,
 
     r = requests.get(url)
 
-    return bytes_to_dict(r, return_status)
+    return json.loads(r.content)
 
 
 
