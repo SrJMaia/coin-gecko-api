@@ -13,7 +13,7 @@ class TestPyGecko(unittest.TestCase):
     def test_api_simple_v1(self):
         actual = get_simple_price_from_api(url=self.URL, 
                                             cryptos_list=["bitcoin"])
-        expected = {"bitcoin":{"usd": self.BTC_USD_PRICE}}
+        expected = {"bitcoin":{"usd":self.BTC_USD_PRICE}}
         self.assertEqual(actual, expected)
 
     """

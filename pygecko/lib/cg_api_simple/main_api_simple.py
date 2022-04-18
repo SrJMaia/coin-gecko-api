@@ -3,7 +3,7 @@ import json
 
 def get_simple_price_from_api(url,
                             cryptos_list,
-                            second_currency_list=["usd"],
+                            second_currency_list=None,
                             market_cap=False,
                             last_24_vol=False,
                             last_24_change=False,
@@ -27,6 +27,9 @@ def get_simple_price_from_api(url,
                             unix time.
                             default False.    
     """
+
+    if second_currency_list is None:
+        second_currency_list = ["usd"]
 
     url += "simple/price?"
 

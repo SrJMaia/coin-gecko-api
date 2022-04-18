@@ -11,4 +11,5 @@ The cryptocyrrencies mentioned here are only for example purpose.
 # Bugs  
 - Into main.py there is a temporary fix, when running test there's an 
 import error. When changing the import it's possible to run the test
-but the error moves to temporary.py.  
+but the error moves to temporary.py. For further details click 
+[here](https://stackoverflow.com/questions/71875011/python-modulenotfounderror-when-importing-a-package/71886894#71886894)
