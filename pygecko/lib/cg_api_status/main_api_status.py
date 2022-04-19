@@ -11,7 +11,7 @@ def get_status_from_api(url):
 
     Return
     ------
-        status (dict): The API responde.
+        status (dict): The API response.
     """
 
     url += "ping"

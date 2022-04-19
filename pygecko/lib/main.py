@@ -22,12 +22,13 @@ class PyGecko():
                         market_cap=False,
                         last_24_vol=False,
                         last_24_change=False,
-                        last_update_at=False):
+                        last_update_at=False,
+                        supply=False):
         return get_simple_price_from_api(self.__API_URL,
                                     cryptos_list=crypto_list,
                                     second_currency_list=second_currency_list,
                                     market_cap=market_cap,
                                     last_24_vol=last_24_vol,
                                     last_24_change=last_24_change,
-                                    last_update_at=last_update_at
-        )
+                                    last_update_at=last_update_at,
+                                    supply=supply)
