@@ -18,45 +18,45 @@ but the error moves to temporary.py. For further details click
 
 - Ping :heavy_check_mark:<br />
 - Simple<br />
-    - Price<br />
-    - Token Price<br />
-    - Supported vs Currencies<br />
+    - Price :heavy_check_mark:<br />
+    - Token Price :x:<br />
+    - Supported vs Currencies :x:<br />
 - Coins<br />
-    - List<br />
-    - Markets<br />
-    - ID<br />
-    - ID/Tickers<br />
-    - ID/History<br />
-    - ID/Market Chart<br />
-    - ID/Market CHart/Range<br />
-    - ID/OHLC<br />
+    - List :x:<br />
+    - Markets :x:<br />
+    - ID :x:<br />
+    - ID/Tickers :x:<br />
+    - ID/History :x:<br />
+    - ID/Market Chart :x:<br />
+    - ID/Market CHart/Range :x:<br />
+    - ID/OHLC :x:<br />
 - Contract<br />
-    - Contract Address<br />
-    - Contract Address/Market Chart<br />
-    - Contract Address/Market Chart/ Range<br />
-- Asset Platofrms<br />
+    - Contract Address :x:<br />
+    - Contract Address/Market Chart :x:<br />
+    - Contract Address/Market Chart/ Range :x:<br />
+- Asset Platofrms :x:<br />
 - Categories<br />
-    - Categories/List<br />
-    - Categories<br />
+    - Categories/List :x:<br />
+    - Categories :x:<br />
 - Exchanges<br />
-    - Exchanges<br />
-    - Exchanges/List<br />
-    - Exchanges/ID<br />
-    - Exchanges/ID/Tickers<br />
-    - Exchanges/ID/Volume Chart<br />
+    - Exchanges :x:<br />
+    - Exchanges/List :x:<br />
+    - Exchanges/ID :x:<br />
+    - Exchanges/ID/Tickers :x:<br />
+    - Exchanges/ID/Volume Chart :x:<br />
 - Indexes<br />
-    - Indexes<br />
-    - Indexes/Market ID/ID<br />
-    - Indexes/List<br />
+    - Indexes :x:<br />
+    - Indexes/Market ID/ID :x:<br />
+    - Indexes/List :x:<br />
 - Derivatives<br />
-    - Derivatives<br />
-    - Derivatives/Exchanges<br />
-    - Derivatives/Exchanges/ID<br />
-    - Derivatives/Exchanges/List<br />
-- Exchange Rates<br />
-- Search<br />
-- Trending<br />
+    - Derivatives :x:<br />
+    - Derivatives/Exchanges :x:<br />
+    - Derivatives/Exchanges/ID :x:<br />
+    - Derivatives/Exchanges/List :x:<br />
+- Exchange Rates :x:<br />
+- Search :x:<br />
+- Trending :x:<br />
 - Global<br />
-    - Global<br />
-    - Global/Decentralized Finance DEFI<br />
-- Comapnies<br />
+    - Global :x:<br />
+    - Global/Decentralized Finance DEFI :x:<br />
+- Comapnies :x:<br />
