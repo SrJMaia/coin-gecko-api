@@ -1,1 +1,1 @@
-from .main_api_simple import get_simple_price_from_api
+from .main_api_simple_price import get_simple_price_from_api
