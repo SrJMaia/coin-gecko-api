@@ -16,7 +16,7 @@ but the error moves to temporary.py. For further details click
 
 # Features  
 
-- Ping\
+- Ping<br />
 - Simple\
     - Price\
     - Token Price\
