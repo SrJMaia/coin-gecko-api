@@ -1,1 +1,2 @@
-from .main_api_simple_price import get_simple_price_from_api
+from .price import get_simple_price_from_api
+from .vs_currency import get_supported_vs_currencies_api

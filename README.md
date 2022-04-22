@@ -20,7 +20,7 @@ but the error moves to temporary.py. For further details click
 - Simple<br />
     - Price :heavy_check_mark:<br />
     - Token Price :x:<br />
-    - Supported vs Currencies :x:<br />
+    - Supported vs Currencies :heavy_check_mark:<br />
 - Coins<br />
     - List :x:<br />
     - Markets :x:<br />

@@ -1,6 +1,7 @@
 import requests
 import json
 
+
 def get_status_from_api(url):
     """
     Get the current API status.
@@ -11,7 +12,7 @@ def get_status_from_api(url):
 
     Return
     ------
-        status (dict): The API response.
+        status (dict): The API status.
     """
 
     url += "ping"

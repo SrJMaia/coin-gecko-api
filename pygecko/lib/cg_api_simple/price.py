@@ -37,6 +37,11 @@ def get_simple_price_from_api(
         supply (bool): If True, it will return the circulation, total and max
                             supply of the coin.
                             default False.
+
+    Return
+    ------
+        response_dict (dict): The price and the flag informations from
+                            each coin requested.
     """
 
     if second_currency_list is None:

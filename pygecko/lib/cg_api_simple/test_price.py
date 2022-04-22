@@ -1,7 +1,8 @@
-import main_api_simple as mps
+import price as mps
 import unittest
 
-class TestPyGecko(unittest.TestCase):
+
+class TestSimplePrice(unittest.TestCase):
 
     URL = "https://api.coingecko.com/api/v3/"
     BTC_USD_PRICE = 39284
@@ -10,12 +11,10 @@ class TestPyGecko(unittest.TestCase):
     BTC_VOL = 25087513458
     BTC_PCT_CHANGE = -2.94
 
-
     # API TESTS
     def test_api_simple_v1(self):
-        actual = mps.get_simple_price_from_api(url=self.URL, 
-                                            cryptos_list=["bitcoin"])
-        expected = {"bitcoin":{"usd":self.BTC_USD_PRICE}}
+        actual = mps.get_simple_price_from_api(url=self.URL, cryptos_list=["bitcoin"])
+        expected = {"bitcoin": {"usd": self.BTC_USD_PRICE}}
         self.assertEqual(actual, expected)
 
     """
@@ -26,36 +25,40 @@ class TestPyGecko(unittest.TestCase):
     """
 
     def test_api_simple_v2(self):
-        actual = mps.get_simple_price_from_api(url=self.URL, 
-                                            cryptos_list=["bitcoin"],
-                                            second_currency_list=["usd","eur"])
-        expected = {"bitcoin":{"usd": self.BTC_USD_PRICE, 
-                                "eur":self.BTC_EUR_PRICE}}
+        actual = mps.get_simple_price_from_api(
+            url=self.URL, cryptos_list=["bitcoin"], second_currency_list=["usd", "eur"]
+        )
+        expected = {"bitcoin": {"usd": self.BTC_USD_PRICE, "eur": self.BTC_EUR_PRICE}}
         self.assertEqual(actual, expected)
 
     def test_api_simple_v3(self):
-        actual = mps.get_simple_price_from_api(url=self.URL, 
-                                            cryptos_list=["bitcoin"],
-                                            market_cap=True)
+        actual = mps.get_simple_price_from_api(
+            url=self.URL, cryptos_list=["bitcoin"], market_cap=True
+        )
         expected = (self.BTC_MARKET_CAP / actual["bitcoin"]["usd_market_cap"] - 1) * 100
         self.assertLess(expected, 0.95, 2)
 
     def test_api_simple_v4(self):
-        actual = mps.get_simple_price_from_api(url=self.URL, 
-                                            cryptos_list=["bitcoin"],
-                                            last_24_vol=True)
+        actual = mps.get_simple_price_from_api(
+            url=self.URL, cryptos_list=["bitcoin"], last_24_vol=True
+        )
         expected = (self.BTC_VOL / actual["bitcoin"]["usd_24h_vol"] - 1) * 100
-        self.assertLess(expected, 1., 2)
+        self.assertLess(expected, 1.0, 2)
 
     def test_api_simple_v5(self):
-        actual = mps.get_simple_price_from_api(url=self.URL, 
-                                            cryptos_list=["bitcoin"],
-                                            last_24_change=True)
-        expected = {"bitcoin":{"usd": self.BTC_USD_PRICE,
-                                "usd_24h_change":self.BTC_PCT_CHANGE}}
-        actual["bitcoin"]["usd_24h_change"] = round(actual["bitcoin"]["usd_24h_change"], 2)
+        actual = mps.get_simple_price_from_api(
+            url=self.URL, cryptos_list=["bitcoin"], last_24_change=True
+        )
+        expected = {
+            "bitcoin": {
+                "usd": self.BTC_USD_PRICE,
+                "usd_24h_change": self.BTC_PCT_CHANGE,
+            }
+        }
+        actual["bitcoin"]["usd_24h_change"] = round(
+            actual["bitcoin"]["usd_24h_change"], 2
+        )
         self.assertEqual(actual, expected)
-
 
     # WEB SCRAPING TESTS
     def test_get_circulating_supply_v1(self):
@@ -77,7 +80,7 @@ class TestPyGecko(unittest.TestCase):
         actual = mps.get_total_supply("cronos")
         expected = 30263013692
         self.assertEqual(actual, expected)
-    
+
     def test_get_total_supply_v3(self):
         actual = mps.get_total_supply("ethereum")
         expected = None
@@ -92,7 +95,7 @@ class TestPyGecko(unittest.TestCase):
         actual = mps.get_max_supply("cronos")
         expected = None
         self.assertEqual(actual, expected)
-    
+
     def test_get_max_supply_v3(self):
         actual = mps.get_max_supply("ethereum")
         expected = None
