@@ -22,7 +22,7 @@ but the error moves to temporary.py. For further details click
     - Token Price :x:<br />
     - Supported vs Currencies :heavy_check_mark:<br />
 - Coins<br />
-    - List :x:<br />
+    - List :heavy_check_mark::heavy_exclamation_mark:<br />
     - Markets :x:<br />
     - ID :x:<br />
     - ID/Tickers :x:<br />
